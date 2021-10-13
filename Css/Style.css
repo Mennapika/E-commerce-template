@@ -12,6 +12,39 @@ body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: burlywood;
 }
+.container {
+    width:85%;
+    margin: auto;
+}
+.row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.btn{
+    border: none;
+    padding: 19px 39px;
+    background-color:#4a4a4b;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    background-color: #ff2020;
+    width: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s ease-in;
+}
+.btn:hover::before{
+    width: 100%;
+}
+
 /*
 *******************************************************************
                          Start-Nav                            
@@ -21,15 +54,18 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 28px 15px;
+    padding: 41px 27px;
     margin: 0px;
     background-color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
 }
-nav .list{
-    
-  
-   
+nav input , nav label {
+    display: none;
 }
+
 nav .list .list-item{
     
     display: inline-block;
@@ -41,11 +77,11 @@ nav .list .list-item:nth-child(4)::after{
     background-color: red;
     border-radius: 8px;
     color: white;
-    padding: 4px;
-    font-size: 11px;
-    top: -20px;
+    padding: 6px;
+    font-size: 13px;
+    top: -33px;
     position: absolute;
-    box-shadow: -1px 3px #e2d7d7;
+    box-shadow: -1px 3px #e2d7d7
 }
 
 nav .list .list-item a {
@@ -86,7 +122,7 @@ nav .list .list-item .dropdown::before{
     border-bottom: 6px solid red;
     position: absolute;
     top: -16px;
-    left: 17px
+    left: 17px;
 }
 
 
@@ -98,4 +134,45 @@ nav .list .list-item .dropdown .dropdown-item {
 nav .nav-icon a{
     margin: 21px;
     color: #141517;
+}
+
+/*
+*******************************************************************
+                         Start-Header                            
+*******************************************************************
+*/
+header{
+    background-color: #f0f0f2;
+}
+header .row {
+    align-items: center;
+}
+header .head-content{
+margin-top: 16px;
+}
+header .head-content h2{
+    font-size: 80px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+
+}
+header .head-content p{
+    width: 55%;
+    margin-bottom: 20px;
+
+}
+header img{
+animation-name: imgScale;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+@keyframes imgScale {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+    
 }
