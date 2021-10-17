@@ -229,7 +229,36 @@ animation-direction: alternate;
         font-size: 23px;
         cursor: pointer;
     }
+    header .head-content h2{
+        font-size: 40px;
+        
     
+    }
+  
+    header img {
+        width: 150%;
+    }
+    
+    
+    
+    
+}
+@media (max-width :290px){
+    nav .nav-icon{
+        margin-left: 16px;
+        font-size: 12px;
+    }
+    nav .nav-icon a{
+        margin-left: 0px;
+    }
+    nav label i{
+      
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+}
+@media (max-width : 600px){
     header{
         padding: 100px 0 40px;
     }
@@ -244,5 +273,18 @@ animation-direction: alternate;
     header .head-content p {
         width: 85%;
     }
+
+}
+@media (min-width : 1024px){
+    header img{
+        width: 130%;
+    }
+    header .head-content h2{
+        font-size: 36px;
+      
     
+    }
+    header .head-content p {
+        width: 85%;
+    }
 }
