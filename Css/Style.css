@@ -62,9 +62,11 @@ nav{
     top: 0;
     z-index: 100;
 }
+
 nav input , nav label {
     display: none;
 }
+
 
 nav .list .list-item{
     
@@ -102,6 +104,7 @@ nav .list .list-item .dropdown{
     padding: 11px;
     list-style: none;
     transition:  all 0.4s ease-in;
+    z-index: 1;
 }
 nav .list .list-item:hover>.dropdown{
 opacity: 1;
@@ -132,7 +135,7 @@ nav .list .list-item .dropdown .dropdown-item {
     margin-bottom: 20px;
 }
 nav .nav-icon a{
-    margin: 21px;
+    margin-left: 25px;
     color: #141517;
 }
 
@@ -175,6 +178,71 @@ animation-direction: alternate;
     }
     100%{
         transform: scale(1.1);
+    }
+    
+}
+
+
+
+
+
+@media (max-width : 900px) {
+    nav {
+        
+        padding: 15px 22px;
+       
+    }
+    nav .list{
+        display: block;
+        position: absolute;
+        left: 16px;
+        width: 88%;
+        top: 55px;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;   
+    }
+    nav input:checked ~ .list{
+        opacity: 1;
+        top: 60px;   
+    }
+    nav .list .list-item{
+     padding: 20px 0px;
+    display: block;
+    background-color: white;
+   
+    }
+    nav .list .list-item:nth-child(4)::after{
+        display: none;
+    }
+    nav .nav-icon{
+        margin-left: 35px;
+    }
+    nav .nav-icon a{
+        margin-left: 13px;
+    }
+   nav label {
+        display: block;
+        order: 3;
+    }
+    nav label i{
+        color: red;
+        font-size: 23px;
+        cursor: pointer;
+    }
+    
+    header{
+        padding: 100px 0 40px;
+    }
+    header img{
+        display: none;
+    }
+    header .head-content h2{
+        font-size: 36px;
+      
+    
+    }
+    header .head-content p {
+        width: 85%;
     }
     
 }
