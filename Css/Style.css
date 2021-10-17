@@ -10,7 +10,6 @@
 }
 body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-color: burlywood;
 }
 .container {
     width:75%;
@@ -181,6 +180,50 @@ animation-direction: alternate;
     }
     
 }
+/*
+*******************************************************************
+                         Start-NewArrivals                             
+*******************************************************************
+*/
+.new-arrival{
+    padding: 100px 0 50px ;
+
+}
+.new-arrival h2{
+    font-size: 48px;
+    margin-bottom: 35px;
+}
+.new-arrival  .item {
+text-align: center;
+margin-top: 35px;
+
+}
+.new-arrival  .item .img-item{
+    margin-bottom: 20px;
+    overflow: hidden;
+
+}
+.new-arrival  .item:hover img {
+    transform: scale(1.1);
+}
+.new-arrival  .item .img-item img{
+    transition: all 0.4s ease-in;
+
+}
+.new-arrival  .item a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+.new-arrival  .item p{
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+
+}
 
 
 
@@ -238,7 +281,15 @@ animation-direction: alternate;
     header img {
         width: 150%;
     }
-    
+    .new-arrival .row{
+        flex-flow: row wrap;
+    }
+    .new-arrival .item{
+        width: 50%;
+    }
+    .new-arrival .item .img-item {
+        margin-left: 20px;
+    }
     
     
     
@@ -256,9 +307,13 @@ animation-direction: alternate;
         font-size: 16px;
         cursor: pointer;
     }
+    .new-arrival .item{
+        width: 100%;
+    }
     
 }
 @media (max-width : 600px){
+    
     header{
         padding: 100px 0 40px;
     }
@@ -273,9 +328,16 @@ animation-direction: alternate;
     header .head-content p {
         width: 85%;
     }
+    .row {
+        flex-flow: column wrap;
+
+    }
+    .new-arrival  .item {
+        width: 100%;
+    }
 
 }
-@media (min-width : 1024px){
+@media (max-width : 1024px) and (min-width:1020px){
     header img{
         width: 130%;
     }
@@ -286,5 +348,14 @@ animation-direction: alternate;
     }
     header .head-content p {
         width: 85%;
+    }
+    .new-arrival .container{
+        width: 85%;
+    }
+    .new-arrival .item{
+        width: 35%;
+    }
+    .new-arrival .item .img-item {
+        margin-left: 10px;
     }
 }
