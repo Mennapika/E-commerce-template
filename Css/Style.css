@@ -260,6 +260,100 @@ margin-top: 35px;
     transform: scale(1);
 }
 
+/*
+*******************************************************************
+                         Start-popular                             
+*******************************************************************
+*/
+
+.popular{
+    text-align: center;
+    padding: 100px 0;
+
+}
+.popular .heading{
+    margin-bottom: 72px;
+
+}
+.popular .heading  h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+
+}
+.popular .heading p{
+width: 53%;
+margin: auto;
+line-height: 1.6;
+}
+.popular .row{
+    flex-flow: row wrap;
+    
+}
+
+.popular .item {
+    position: relative;
+    margin-bottom: 40px;
+}
+.popular .item .item-img{
+    position: relative;
+    overflow: hidden;
+    
+}
+.popular .item .item-img .add-cart{
+    position: absolute;
+    bottom: -65px;
+    left: 0;
+    background-color: red;
+    padding: 20px;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.4s ease-in;
+}
+.popular .item .item-img img{
+    border-bottom: 3px solid red;
+}
+.popular .item:hover .add-cart{
+    bottom: 0;
+}
+.popular .item .content{
+    margin-top: 20px;
+}
+.popular .item .content a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.popular .item .content p{
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.popular .item  .icon{
+    position: absolute;
+    top: 26px;
+    right: 28px;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.4s ease-in;
+    color: black;
+}
+.popular .item:hover .icon{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
 
 @media (max-width : 900px) {
     nav {
